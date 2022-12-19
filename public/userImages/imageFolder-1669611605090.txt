@@ -1,0 +1,394 @@
+{
+    "request_id": "{{$guid}}",
+    "name": "tesalot",
+    "description": "Default Role Permissions",
+    "permissionGroups": [
+        {
+            "entities": [
+                {
+                    "name": "navigation_bar",
+                    "displayName": "Navigation Bar",
+                    "totalAccess": true,
+                    "additionalPermissions": [
+                        {
+                            "is_permit": true,
+                            "displayName": "Dashboard",
+                            "permissionName": "dashboard"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Consultants",
+                            "permissionName": "consultants"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Placement Information",
+                            "permissionName": "placement_information"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Time Sheets",
+                            "permissionName": "time_sheets"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Invoices",
+                            "permissionName": "invoices"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Employee Self Service",
+                            "permissionName": "employee_self_service"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Vendors",
+                            "permissionName": "vendors"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Clients",
+                            "permissionName": "clients"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Balance Sheet",
+                            "permissionName": "balance_sheet"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Expense Management",
+                            "permissionName": "expense_management"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Settings",
+                            "permissionName": "settings"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Audit",
+                            "permissionName": "audit"
+                        }
+                    ]
+                }
+            ],
+            "groupDisplayName": "Navigation Bar",
+            "groupName": "navigation_bar",
+            "formType": "list"
+        },
+        {
+            "entities": [
+                {
+                    "name": "dashboard",
+                    "displayName": "Dashboard",
+                    "totalAccess": true,
+                    "additionalPermissions": [
+                        {
+                            "is_permit": true,
+                            "displayName": "Employee Type",
+                            "permissionName": "employee_type"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Employee Status",
+                            "permissionName": "employee_status"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "My Team",
+                            "permissionName": "my_team"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Total Receive",
+                            "permissionName": "total_receive"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Total Payable",
+                            "permissionName": "total_payable"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Income Expenses",
+                            "permissionName": "income_expenses"
+                        }
+                    ]
+                }
+            ],
+            "groupDisplayName": "Dashboard",
+            "groupName": "dashboard",
+            "formType": "list"
+        },
+        {
+            "entities": [
+                {
+                    "name": "clients",
+                    "displayName": "Clients",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "vendors",
+                    "displayName": "Vendors",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": [
+                        {
+                            "is_permit": true,
+                            "displayName": "Statement",
+                            "permissionName": "statement"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Overview",
+                            "permissionName": "overview"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Mail",
+                            "permissionName": "mail"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "Income",
+                            "permissionName": "income"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "More",
+                            "permissionName": "more"
+                        },
+                        {
+                            "is_permit": true,
+                            "displayName": "History",
+                            "permissionName": "history"
+                        }
+                    ]
+                }
+            ],
+            "groupDisplayName": "Contacts",
+            "groupName": "contacts",
+            "formType": "grid"
+        },
+        {
+            "entities": [
+                {
+                    "name": "consultants",
+                    "displayName": "consultants",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "expense_managements",
+                    "displayName": "Expense Managements",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "balance_sheets",
+                    "displayName": "Balance Sheets",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "employee_self_services",
+                    "displayName": "Employee Self Services",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "placement_informations",
+                    "displayName": "Placement Informations",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                }
+            ],
+            "groupDisplayName": "Consultant Services",
+            "groupName": "consultant_services",
+            "formType": "grid"
+        },
+        {
+            "entities": [
+                {
+                    "name": "time_sheets",
+                    "displayName": "Time Sheets",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "invoices",
+                    "displayName": "Invoices",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                }
+            ],
+            "groupDisplayName": "Items",
+            "groupName": "items",
+            "formType": "grid"
+        },
+        {
+            "entities": [
+                {
+                    "name": "departments",
+                    "displayName": "Departments",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "users",
+                    "displayName": "Users (Internal Employees)",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "time_sheet_approval",
+                    "displayName": "Time Sheets Approval Configuration",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "invoice_approval",
+                    "displayName": "Invoices Approval Configuration",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "roles",
+                    "displayName": "Roles",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "consultant_document_category",
+                    "displayName": "Consultant Documents Category",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "currency",
+                    "displayName": "currency",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "visa_type",
+                    "displayName": "Visa Type",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "paycycle",
+                    "displayName": "Pay Cycle Configuration",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "consultant_document_type",
+                    "displayName": "Consultant Document Types",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "referal_bonus",
+                    "displayName": "Referal Bonus Configuration",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                },
+                {
+                    "name": "remainder_settings",
+                    "displayName": "Remainder Settings",
+                    "totalAccess": true,
+                    "create": true,
+                    "update": true,
+                    "delete": true,
+                    "view": true,
+                    "additionalPermissions": []
+                }
+            ],
+            "groupDisplayName": "Admin Settings",
+            "groupName": "admin_settings",
+            "formType": "grid"
+        }
+    ]
+}

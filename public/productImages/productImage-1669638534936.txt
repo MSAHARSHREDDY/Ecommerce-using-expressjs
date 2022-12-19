@@ -1,0 +1,107 @@
+
+const addressDetails_get = async (req, res) => {
+    try {
+        let total=await addressDetailsModel.countDocuments()
+       
+        let page=(req.query.page)
+        let limit=(req.query.limit)
+        const totalPages=Math.ceil(total/limit)
+        const result = await addressDetailsModel.find({
+            "$or":[
+                {"city":{$regex:req.query.search,$options:"i"}},
+                {"state":{$regex:req.query.search,$options:"i"}},
+                {"country":{$regex:req.query.search,$options:"i"}}
+            ]
+            
+        })
+
+        console.log(result)
+        const startIndex = (page - 1) * limit
+        const endIndex = page * limit
+        const resultUsers = result.slice(startIndex, endIndex)
+        res.send({
+            result:{
+                data:resultUsers,
+                meta:{
+                    total:total,
+                    currentPage:page,
+                    perPage:limit,
+                    totalPages:totalPages
+                }
+            }
+        }), res) => {
+
+	// validationResult function checks whether
+	// any occurs or not and return an object
+	const errors = validationResult(req);
+
+	// If some error occurs, then this
+	// block of code will run
+	if (!errors.isEmpty()) {
+		res.json(errors)
+	}
+
+	// If no error occurs, then this
+	// block of code will run
+	else {
+		res.send("Successfully validated")
+	}
+});
+
+app.listen(PORT, function (error) {
+	if (error) throw error
+	console.log("Server created Successfully on PORT ", PORT)
+})
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+// routes/user.routes.js
+const express = require("express");
+const session = require('express-session');
+const router = express.Router();
+const { check, validationResult } = require('express-validator');
+
+router.post('/create-user',
+    [
+        check('name')
+            .not()
+            .isEmpty()
+            .withMessage('Name is required'),
+        check('email', 'Email is required')
+            .isEmail(),
+        check('password', 'Password is requried')
+            .isLength({ min: 1 })
+            .custom((val, { req, loc, path }) => {
+                if (val !== req.body.confirm_password) {
+                    throw new Error("Passwords don't match");
+                } else {
+                    return value;
+                }
+            }),
+    ], (req, res) => {
+        var errors = validationResult(req).array();
+        if (errors) {
+            req.session.errors = errors;
+            req.session.success = false;
+            res.redirect('/user');
+        } else {
+            req.session.success = true;
+            res.redirect('/user');
+        }
+    });
+router.get('/', function (req, res) {
+    res.render('user', {
+        success: req.session.success,
+        errors: req.session.errors
+    });
+    req.session.errors = null;
+});
+
+module.exports = router;

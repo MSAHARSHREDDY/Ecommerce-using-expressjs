@@ -1,0 +1,32 @@
+
+const addressDetails_get = async (req, res) => {
+    try {
+        let total=await addressDetailsModel.countDocuments()
+       
+        let page=(req.query.page)
+        let limit=(req.query.limit)
+        const totalPages=Math.ceil(total/limit)
+        const result = await addressDetailsModel.find({
+            "$or":[
+                {"city":{$regex:req.query.search,$options:"i"}},
+                {"state":{$regex:req.query.search,$options:"i"}},
+                {"country":{$regex:req.query.search,$options:"i"}}
+            ]
+            
+        })
+
+        console.log(result)
+        const startIndex = (page - 1) * limit
+        const endIndex = page * limit
+        const resultUsers = result.slice(startIndex, endIndex)
+        res.send({
+            result:{
+                data:resultUsers,
+                meta:{
+                    total:total,
+                    currentPage:page,
+                    perPage:limit,
+                    totalPages:totalPages
+                }
+            }
+        })

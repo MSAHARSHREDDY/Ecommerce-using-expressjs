@@ -1,0 +1,33 @@
+  <%
+          if(username)
+          {
+            %>
+            <li class="nav-item">
+              <p>Welcome <%=username.name %></p>
+            </li>
+             
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <%
+          }
+          else
+          {
+            %>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signin">signin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/explore">Explore</a>
+              </li>
+             
+             
+            <%
+          }
+          %>
